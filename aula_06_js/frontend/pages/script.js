@@ -95,6 +95,6 @@ console.log(lista);
 // um seletor diferente em cada caso (por id, por class, e 
 // por hierarquia — ex: #produto-3 .preco).
 
-const elemento1 = document.querySelector("#produto-1 .produto-1");
-console.log("elemento1.textContent: " + elemento1.textContent);
-elemento1.textContent = "preco R$ 51,90";
+const preco1 = document.querySelector("#produto-1 h2");
+console.log(preco1.textContent);
+preco1.textContent = "Caneca Personalizada Premium";
