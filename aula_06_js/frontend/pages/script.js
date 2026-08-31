@@ -23,8 +23,9 @@ console.log(produtos.length);
 // da página (dica: dentro de uma lista de querySelectorAll, como pegar 
 // só um item específico?) e mostre o texto dele no console.
 
+
 const preco = document.querySelector(".preco");
-console.log(preco);
+console.log(preco.textContent);
 
 // QUESTÃO 5. Selecione o produto pelo id (#produto-2) e mostre 
 // o elemento inteiro no console. Compare no console: o que aparece 
@@ -38,8 +39,10 @@ console.log(produto2);
 // innerText e innerHTML desse elemento. Anote a diferença que você 
 // observou entre os três.
 
-const produto1 = document.querySelector("h2");
-console.log(produto1);
+const produto1 = document.querySelector("#produto-1 h2");
+console.log("textContent:", produto1.textContent);
+console.log("innerText:", produto1.innerText);
+console.log("innerHTML:", produto1.innerHTML);
 
 // QUESTÃO 7. Troque o texto do <h1> para "Loja da Turma — Promoção!" 
 // usando textContent.
@@ -50,7 +53,8 @@ titulo.textContent = "Loja da Turma - Promoção!";
 // QUESTÃO 8. Troque o texto do #rodape para "Todos os 
 // direitos reservados © 2026".
 
-console.log("rodape.textContent: " + rodape.textContent);
+const rodape = document.querySelector("#rodape");
+console.log("rodape.textContent:", rodape.textContent);
 rodape.textContent = "Todos os direitos reservados © 2026";
 
 // QUESTÃO 9. Selecione a <p class="descricao"> do #produto-3 e altere 
@@ -95,6 +99,29 @@ console.log(lista);
 // um seletor diferente em cada caso (por id, por class, e 
 // por hierarquia — ex: #produto-3 .preco).
 
-const preco1 = document.querySelector("#produto-1 h2");
-console.log(preco1.textContent);
-preco1.textContent = "Caneca Personalizada Premium";
+// Produto 1 - ID
+const produto1Titulo = document.querySelector("#produto-1 h2");
+console.log(produto1Titulo.textContent);
+produto1Titulo.textContent = "Caneca Personalizada Premium";
+
+
+// Produto 2 - CLASS
+const precos = document.querySelectorAll(".preco");
+const preco2 = precos[1];
+console.log(preco2.textContent);
+preco2.textContent = "R$ 69,90";
+
+
+// Produto 3 - HIERARQUIA
+const preco3 = document.querySelector("#produto-3 .preco");
+console.log(preco3.textContent);
+preco3.textContent = "R$ 59,90";
+
+// QUESTÃO 14. Para pensar (sem código): tudo que você fez até aqui aconteceu 
+// assim que a página carregou. Se você quisesse que o texto do 
+// #contador-carrinho só mudasse quando alguém clicasse em um botão, 
+// o que você acha que precisaria existir no código para isso funcionar?
+
+// sem código
+// Precisaria de um botão e de um evento de clique
+// para executar a mudança do contador.
