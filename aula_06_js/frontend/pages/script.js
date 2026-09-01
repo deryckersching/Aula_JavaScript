@@ -34,6 +34,11 @@ console.log(preco.textContent);
 const produto2 = document.querySelector("#produto-2");
 console.log(produto2);
 
+// Resposta 5. Além do texto, aparecem outros elementos HTML dentro do produto, 
+// como o <h2> e os dois <p>, que mostram o preço e a descrição.
+
+
+
 // QUESTÃO 6. Selecione o <h2> do #produto-1 (o que tem <strong> dentro) 
 // e mostre no console, separadamente, o resultado de textContent, 
 // innerText e innerHTML desse elemento. Anote a diferença que você 
@@ -43,6 +48,12 @@ const produto1 = document.querySelector("#produto-1 h2");
 console.log("textContent:", produto1.textContent);
 console.log("innerText:", produto1.innerText);
 console.log("innerHTML:", produto1.innerHTML);
+
+// Resposta 6. textContent mostra todo o texto do elemento.
+// innerText mostra o texto visível.
+// innerHTML mostra o texto junto com as tags HTML.
+
+
 
 // QUESTÃO 7. Troque o texto do <h1> para "Loja da Turma — Promoção!" 
 // usando textContent.
@@ -74,6 +85,12 @@ const tituloProduto2 = document.querySelector("#produto-2 h2");
 console.log("Antes:", tituloProduto2.innerHTML);
 tituloProduto2.innerHTML = "Camiseta <strong>Dev</strong> — Edição Limitada";
 console.log("Depois:", tituloProduto2.innerHTML);
+
+// Resposta 10. Com innerHTML, o navegador interpreta a tag <strong>, então a palavra "Dev" 
+// fica em negrito. Com textContent, a tag é tratada como texto e aparece 
+// escrita na tela, sem deixar "Dev" em negrito.
+
+
 
 // QUESTÃO 11. Selecione o <span id="contador-carrinho"> e altere 
 // seu texto para "3".
@@ -122,6 +139,5 @@ preco3.textContent = "R$ 59,90";
 // #contador-carrinho só mudasse quando alguém clicasse em um botão, 
 // o que você acha que precisaria existir no código para isso funcionar?
 
-// sem código
-// Precisaria de um botão e de um evento de clique
-// para executar a mudança do contador.
+// Resposta 14. Seria necessário criar um botão no HTML e usar um evento de 
+// clique (click) no JavaScript para alterar o contador quando o botão fosse clicado.
